@@ -133,7 +133,7 @@ curve25519-dalek = { version = "4.3.0", package = "curve25519-dalek-ml", default
 elliptic-curve = { version = "0.13", default-features = false, features = ["ff", "group"] }
 decaf377 = { version = "0.10", package = "decaf377_plus", default-features = false, optional = true }
 ed448-goldilocks = { version = "0.16", package = "ed448-goldilocks-plus", default-features = false, optional = true }
-jubjub = { version = "0.10", package = "jubjub-plus", optional = true }
+jubjub = { version = "0.10", package = "jubjub-plus", default-features = false, optional = true }
 k256 = { version = "0.13", default-features = false, optional = true }
 p256 = { version = "0.13", default-features = false, optional = true }
 p384 = { version = "0.13", default-features = false, optional = true }

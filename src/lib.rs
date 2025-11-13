@@ -1,5 +1,9 @@
+#[cfg(any(feature = "bls12_381_plus", feature = "rust"))]
+pub use bls12_381_plus;
 #[cfg(any(feature = "blst", feature = "rust"))]
 pub use blsful;
+#[cfg(any(feature = "blstrs_plus", feature = "blst"))]
+pub use blstrs_plus;
 #[cfg(feature = "curve25519-dalek")]
 pub use curve25519_dalek;
 #[cfg(feature = "ed448-goldilocks")]
