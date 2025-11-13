@@ -1,0 +1,141 @@
+[package]
+authors = ["Lit Protocol Developers"]
+edition = "2024"
+name = "lit-rust-crypto"
+version = "0.1.0"
+
+[features]
+default = [
+    "blsful/default",
+    "blst",
+    "curve25519-dalek/default",
+    "decaf377/default",
+    "ed448-goldilocks/default",
+    "elliptic-curve/default",
+    "jubjub/default",
+    "k256/default",
+    "p256/default",
+    "p384/default",
+    "pasta/default",
+    "vsss-rs/default",
+]
+alloc = [
+    "bls12_381_plus?/alloc",
+    "curve25519-dalek?/alloc",
+    "decaf377?/alloc",
+    "ed448-goldilocks?/alloc",
+    "elliptic-curve/alloc",
+    "jubjub?/alloc",
+    "k256?/alloc",
+    "p256?/alloc",
+    "p384?/alloc",
+    "pasta?/alloc",
+    "vsss-rs?/alloc",
+]
+arithmetic = [
+    "elliptic-curve/arithmetic",
+    "k256?/arithmetic",
+    "p256?/arithmetic", 
+    "p384?/arithmetic",
+]
+bits = [
+    "bls12_381_plus?/bits",
+    "bls12_381_plus?/group",
+    "curve25519-dalek?/group", 
+    "curve25519-dalek?/group-bits",
+    "elliptic-curve/bits",
+    "jubjub?/bits", 
+    "k256?/bits", 
+    "p256?/bits", 
+    "p384?/bits", 
+    "pasta?/bits",
+]
+blst = [
+    "blsful/blst",
+    "blstrs_plus",
+]
+digest = [
+    "curve25519-dalek?/digest",
+    "elliptic-curve/digest",
+    "k256?/digest",
+    "p256?/digest",
+    "p384?/digest",
+]
+ecdsa = [
+    "k256?/ecdsa",
+    "p256?/ecdsa",
+    "p384?/ecdsa",
+]
+ecdsa-core = [
+    "k256?/ecdsa-core",
+    "p256?/ecdsa-core",
+    "p384?/ecdsa-core",
+]
+expose-field = [
+    "bls12_381_plus?/expose-fields", 
+    "k256?/expose-field", 
+    "p256?/expose-field", 
+    "p384?/expose-field",
+]
+hash2curve = [
+    "elliptic-curve/hash2curve",
+    "k256?/hash2curve",
+    "p256?/hash2curve", 
+    "p384?/hash2curve",
+]
+hex = [
+    "pasta?/hex",
+    "vsss-rs?/hex",
+]
+rust = [
+    "alloc",
+    "blsful/rust",
+    "bls12_381_plus",
+]
+serde = [
+    "curve25519-dalek?/serde",
+    "decaf377?/serde",
+    "ed448-goldilocks?/serde",
+    "elliptic-curve/serde",
+    "jubjub?/serde",
+    "k256?/serde",
+    "p256?/serde",
+    "p384?/serde",
+    "pasta?/serde",
+    "vsss-rs?/serde",
+]
+sha = [
+    "k256?/sha256", 
+    "p256?/sha256", 
+    "p384?/sha384",
+]
+std = [
+    "bls12_381_plus?/std",
+    "decaf377?/std",
+    "ed448-goldilocks?/std",
+    "elliptic-curve/std",
+    "k256?/std",
+    "p256?/std",
+    "p384?/std",
+    "vsss-rs?/std",
+]
+zeroize = [
+    "curve25519-dalek?/zeroize",
+    "ed448-goldilocks?/zeroize",
+    "vsss-rs?/zeroize",
+]
+
+[dependencies]
+blsful = { version = "3.0.0", default-features = false, optional = true }
+bls12_381_plus = { version = "0.8", default-features = false, optional = true }
+blstrs_plus = { version = "0.8", optional = true }
+curve25519-dalek = { version = "4.3.0", package = "curve25519-dalek-ml", default-features = false, optional = true }
+elliptic-curve = { version = "0.13", default-features = false, features = ["ff", "group"] }
+decaf377 = { version = "0.10", package = "decaf377_plus", default-features = false, optional = true }
+ed448-goldilocks = { version = "0.16", package = "ed448-goldilocks-plus", default-features = false, optional = true }
+jubjub = { version = "0.10", package = "jubjub-plus", optional = true }
+k256 = { version = "0.13", default-features = false, optional = true }
+p256 = { version = "0.13", default-features = false, optional = true }
+p384 = { version = "0.13", default-features = false, optional = true }
+pasta = { version = "0.5", package = "pasta_curves_plus", default-features = false, optional = true }
+vsss-rs = { version = "5.1", default-features = false, features = ["curve25519"], optional = true }
