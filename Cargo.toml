@@ -2,7 +2,7 @@
 authors = ["Lit Protocol Developers"]
 edition = "2024"
 name = "lit-rust-crypto"
-version = "0.1.0"
+version = "0.3.0"
 
 [features]
 default = [
@@ -124,6 +124,18 @@ zeroize = [
     "ed448-goldilocks?/zeroize",
     "vsss-rs?/zeroize",
 ]
+
+bls12-381-plus-default = ["bls12_381_plus?/default"]
+curve25519-dalek-default = ["curve25519-dalek?/default"]
+elliptic-curve-default = ["elliptic-curve/default"]
+decaf377-default = ["decaf377?/default"]
+ed448-goldilocks-default = ["ed448-goldilocks?/default"]
+jubjub-default = ["jubjub?/default"]
+k256-default = ["k256?/default"]
+p256-default = ["p256?/default"]
+p384-default = ["p384?/default"]
+pasta-default = ["pasta?/default"]
+vsss-rs-default = ["vsss-rs?/default"]
 
 [dependencies]
 blsful = { version = "3.0.0", default-features = false, optional = true }
