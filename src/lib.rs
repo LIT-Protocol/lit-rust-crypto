@@ -6,6 +6,8 @@ pub use blsful;
 pub use blstrs_plus;
 #[cfg(feature = "curve25519-dalek")]
 pub use curve25519_dalek;
+#[cfg(feature = "decaf377")]
+pub use decaf377;
 #[cfg(feature = "ed448-goldilocks")]
 pub use ed448_goldilocks;
 #[cfg(feature = "jubjub")]
