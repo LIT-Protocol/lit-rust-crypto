@@ -319,9 +319,9 @@ checksum = "1fd0f2584146f6f2ef48085050886acf353beff7305ebd1ae69500e27c67f64b"
 
 [[package]]
 name = "cc"
-version = "1.2.45"
+version = "1.2.46"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "35900b6c8d709fb1d854671ae27aeaa9eec2f8b01b364e1619a40da3e6fe2afe"
+checksum = "b97463e1064cb1b1c1384ad0a0b9c8abd0988e2a91f52606c80ef14aadb63e36"
 dependencies = [
  "find-msvc-tools",
  "shlex",
@@ -513,6 +513,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "ec-gpu"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bd63582de2b59ea1aa48d7c1941b5d87618d95484397521b3acdfa0e1e9f5e45"
+
+[[package]]
 name = "ecdsa"
 version = "0.16.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -626,9 +632,9 @@ checksum = "28dea519a9695b9977216879a3ebfddf92f1c08c05d984f8996aecd6ecdc811d"
 
 [[package]]
 name = "find-msvc-tools"
-version = "0.1.4"
+version = "0.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "52051878f80a721bb68ebfbc930e07b65ba72f2da88968ea5c06fd6ca3d3a127"
+checksum = "3a3076410a55c90011c298b04d0cfa770b00fa04e1e3c97d3f6c9de105a03844"
 
 [[package]]
 name = "foldhash"
@@ -804,6 +810,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "hex-literal"
+version = "0.4.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6fe2267d4ed49bc07b63801559be28c718ea06c4738b7a03c94df7386d2cde46"
+
+[[package]]
 name = "hkdf"
 version = "0.12.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -838,9 +850,9 @@ checksum = "4a5f13b858c8d314ee3e8f639011f7ccefe71f97f96e50151fb991f267928e2c"
 
 [[package]]
 name = "jubjub-plus"
-version = "0.10.8"
+version = "0.10.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0c2c5e88d1ac6a903e693287073860ea35299b200273d5c2bd9d7845ec39f319"
+checksum = "b0fcad3e0c0304ef9feef976239c7972da3b91008a0d6d2d577d632a215b73b9"
 dependencies = [
  "bitvec",
  "bls12_381_plus",
@@ -864,6 +876,7 @@ dependencies = [
  "cfg-if",
  "ecdsa",
  "elliptic-curve",
+ "hex-literal",
  "once_cell",
  "serdect 0.2.0",
  "sha2",
@@ -896,7 +909,7 @@ checksum = "2874a2af47a2325c2001a6e6fad9b16a53b802102b528163885171cf92b15976"
 
 [[package]]
 name = "lit-rust-crypto"
-version = "0.4.0"
+version = "0.6.0"
 dependencies = [
  "bls12_381_plus",
  "blsful",
@@ -1084,12 +1097,13 @@ dependencies = [
 
 [[package]]
 name = "pasta_curves_plus"
-version = "0.5.1"
+version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6bacb1f6f3ee2acc4eceb7503270053a233abfd48a1160f555b0bc30389e0917"
+checksum = "42e265b7ebdbfc61a8c0eeac79350cf3225cd390325dc91dd0edede5b6742d58"
 dependencies = [
  "blake2",
  "blake2b_simd",
+ "ec-gpu",
  "elliptic-curve",
  "ff",
  "frost-dkg",
