@@ -1,7 +1,16 @@
 [package]
 authors = ["Lit Protocol Developers"]
+categories = ["cryptography"]
+description = "A convenience wrapper around cryptography libraries for LIT Protocol"
+documentation = "https://docs.rs/lit-rust-crypto"
 edition = "2024"
+exclude = ["tests/**", "benches/**", "examples/**", ".github/**"]
+homepage = "https://crates.io/crates/lit-rust-crypto"
+keywords = ["elliptic", "curves", "keys", "signing", "verification"]
+license = "Apache-2.0 OR MIT"
 name = "lit-rust-crypto"
+readme = "README.md"
+repository = "https://github.com/LIT-Protocol/lit-rust-crypto"
 version = "0.6.0"
 
 [features]
